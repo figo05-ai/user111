@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Figo" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(5, 5, 39);
+    display: flex;
+}
+
+.img-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+    flex-shrink:0;
+    
+}
+.img-box img{
+    width: 100%;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.profile h2{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.menu{
+    background-color: rgb(42, 42, 119);
+    width: 60px;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.menu:hover{
+    width: 260px;
+    transition: 0.5s;
+}
+
+ul{
+    list-style: none;
+    position: relative;
+    height: 95%;
+}
+ul li a{
+    display: block;
+    padding: 20px ;
+    margin: 20px 0;
+    font-weight: 900;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+ul li a:hover,.active, .data-ifo .box:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+.log{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.log a{
+    background-color: rgb(119, 15, 15);
+}
+ul li i{
+    font-size: 20px;
+}
+ul li p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.content{
+    width: 100%;
+    
+    height: 40px;
+}
+.title-info{
+    background-color: rgb(34, 43, 177);
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    margin: 10px;
+}
+.title-info i{
+    font-size: 25px;
+}
+.data-ifo{
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.data-ifo .box{
+    background-color: rgb(42, 42, 119);
+    flex-basis: 700px;
+    height: 150px;
+    margin: 10px;
+    flex-grow: 1;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.box i{
+    font-size: 80px;
+}
+.box .data{
+    text-align: center;
+    font-weight: 600;
+}
+.box .data span{
+    font-size: 40px;
+}
+table{
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    border-spacing:10px;
+}
+td,th{
+    background-color: rgb(42, 42, 119);
+    max-width: 20px;
+    padding: 33px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+td:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+th{
+    background-color: rgb(34, 43, 177);
+}
+.count, .price{
+    padding: 20px;
+    border-radius: 20px;
+}
+.price{
+    background-color: rgb(99, 63, 16);
+    font-weight: bold;
+}
+.count{
+    background-color: rgb(39, 63, 141);
+    font-weight: bold;
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li class="profile">
+                <div class="img-box">
+                    <img src="./user-200x300.webp" alt="profile">
+                </div>
+                <h2>felopater</h2>
+            </li>
+            <li>
+                <a class="active" href="#">
+                    <i class="fa fa-home"></i>
+                    <p>Home</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-user-group"></i>
+                    <p>clients</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-table"></i>
+                    <p>table</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-chart-pie"></i>
+                    <p>chart</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-pen"></i>
+                    <p>Posts</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-star"></i>
+                    <p>Favorite</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-cog"></i>
+                    <p>Setting</p>
+                </a>
+            </li>
+            <li class="log">
+                <a href="#">
+                    <i class="fa fa-sign-out"></i>
+                    <p>Log Out</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!---->
+    <div class="content">
+        <div class="title-info">
+            <p>Home</p>
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+        </div>
+        <!---->
+        <div class="data-ifo">
+            <div class="box">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                <div class="data">
+                    <p>Users</p>
+                    <span>100</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa fa-pen" aria-hidden="true"></i>
+                <div class="data">
+                    <p>Posts</p>
+                    <span>765</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa fa-table" aria-hidden="true"></i>
+                <div class="data">
+                    <p>Products</p>
+                    <span>34</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fa fa-usd" aria-hidden="true"></i>
+                <div class="data">
+                    <p>Revenue</p>
+                    <span>$126</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="title-info">
+            <p>Products</p>
+            <i class="fa fa-table" aria-hidden="true"></i>
+        </div>
+
+
+        <!---->
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>price</th>
+                    <th>count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Labtop</td>
+                    <td><span class="price">
+                            $1267
+                        </span></td>
+                    <td><span class="count">50</span></td>
+
+                </tr>
+                <tr>
+                    <td>Phon</td>
+                    <td> <span class="price">$1200</span></td>
+                    <td><span class="count">90</span></td>
+                </tr>
+                <tr>
+                    <td>wash machin</td>
+                    <td>
+                        <span class="price">
+                            $300
+                        </span>
+                    </td>
+                    
+                    <td>
+                        <span class="count">
+                            10
+                        </span>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>table</td>
+                    <td>
+                        <span class="price">
+                            $50
+                        </span>
+                    </td>
+
+                    <td>
+                        <span class="count">
+                            120
+                        </span>
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
